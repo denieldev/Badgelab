@@ -15,65 +15,66 @@
 </head>
 
 <body>
-    <header>
-        <h2 class="conteiner_titulo"><b class="conteiner_titulo_negrito">Badge</b>lab</h2>
-    </header>
-        <div class="conteiner">
+    <main>
+        <header>
+            <h2 class="conteiner_titulo"><b class="conteiner_titulo_negrito">Badge</b>lab</h2>
+        </header>
+            <div class="conteiner">
 
-            <div id="frente-cracha">
-                <div class="info-front">
-                    <label  for="logoInput"><img id="logo" src=""  alt="logo da empresa" /></label>
-                    <input type="text" id="employee" placeholder="NOME E SOBRENOME">
-                
-                    <figure class="image-container">
-                        <label  for="employeerInput">  <img  id="employeeimage" src="./img projeto/idtemp.png"  alt="foto do colaborador" /></label>
-                    </figure>
-                
-                    <input type="text" id="ocupation" placeholder="FUNÇÃO">
+                <div id="frente-cracha">
+                    <div class="info-front">
+                        <label  for="logoInput"><img id="logo" src=""  alt="logo da empresa" /></label>
+                        <input type="text" id="employee" placeholder="NOME E SOBRENOME">
+                    
+                        <figure class="image-container">
+                            <label  for="employeerInput">  <img  id="employeeimage" src="./img projeto/idtemp.png"  alt="foto do colaborador" /></label>
+                        </figure>
+                    
+                        <input type="text" id="ocupation" placeholder="FUNÇÃO">
 
+                    </div>
+                    
                 </div>
-                
-            </div>
+            
+            
+            <section id="verso-cracha">
+                        <div>
+                            <h2 class="versotxt">Nome Completo</h2>
+                            <input class="inputverso" type="text" placeholder="NOME COMPLETO">
+                        </div>
+                        <div>
+                            <h2 class="versotxt">PIS</h2>
+                            <input class="inputverso" type="text" placeholder="NÚMERO DO PIS">
+                        </div>
+                        <div>
+                            <h2 class="versotxt">Horário Segunda à Quinta:</h2>
+                            <input class="inputverso" type="text" placeholder="HORÁRIO">
+                        </div>
+                        <div>
+                            <h2 class="versotxt">Horário Sexta:</h2>
+                            <input class="inputverso" type="text" placeholder="HORÁRIO">
+                        </div>
+                        <div>
+                            <h2 class="versotxt">intervalo:</h2>
+                            <input class="inputverso" type="text" placeholder="INTERVALO">
+                        </div>
+                        <!-- Gerador do código de barras -->
+                        <div id="barcode-div">
+                        <svg id="code128"></svg>
+                        </div>
+                        <div>
+                            <input id="codebar-input-number" type="text" placeholder="NÚMERO DA MATRICULA" onkeyup="codeBarGen()">
+                        </div>
+                </section>
+        </div>
         
-        
-        <section id="verso-cracha">
-                    <div>
-                        <h2 class="versotxt">Nome Completo</h2>
-                        <input class="inputverso" type="text" placeholder="NOME COMPLETO">
-                    </div>
-                    <div>
-                        <h2 class="versotxt">PIS</h2>
-                        <input class="inputverso" type="text" placeholder="NÚMERO DO PIS">
-                    </div>
-                    <div>
-                        <h2 class="versotxt">Horário Segunda à Quinta:</h2>
-                        <input class="inputverso" type="text" placeholder="HORÁRIO">
-                    </div>
-                    <div>
-                        <h2 class="versotxt">Horário Sexta:</h2>
-                        <input class="inputverso" type="text" placeholder="HORÁRIO">
-                    </div>
-                    <div>
-                        <h2 class="versotxt">intervalo:</h2>
-                        <input class="inputverso" type="text" placeholder="INTERVALO">
-                    </div>
-                    <!-- Gerador do código de barras -->
-                    <div id="barcode-div">
-                       <svg id="code128"></svg>
-                    </div>
-                    <div>
-                        <input id="codebar-input-number" type="text" placeholder="NÚMERO DA MATRICULA" onkeyup="codeBarGen()">
-                    </div>
-            </section>
-    </div>
-    
-    <div id="buttons">
-        <input id="logoInput" type="file" onchange="logoFile()" hidden/><br />
-        
-        <input id="employeerInput" type="file" onchange="previewFile()" hidden /><br / >
+        <div id="buttons">
+            <input id="logoInput" type="file" onchange="logoFile()" hidden/><br />
+            
+            <input id="employeerInput" type="file" onchange="previewFile()" hidden/><br / >
 
-        <button  onclick="printBtnActive()" id="print" class="custom-btn"><span class="iconprint"><ion-icon name="print"></ion-icon></span>IMPRIMIR</button>
-    </div>     
-    
+            <button  onclick="printBtnActive()" id="print" class="custom-btn"><span class="iconprint"><ion-icon name="print"></ion-icon></span>IMPRIMIR</button>
+        </div>  
+    </main>
 </body>
 </html>
