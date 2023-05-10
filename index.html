@@ -7,12 +7,11 @@
     <title>Badgelab</title>
     <link rel="stylesheet" href="css.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-<script src="./script.js"></script>
-
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/jsbarcode/3.3.20/JsBarcode.all.min.js"></script>
+    <script src="./script.js" defer></script>
 </head>
 
 <body>
@@ -58,32 +57,23 @@
                         <h2 class="versotxt">intervalo:</h2>
                         <input class="inputverso" type="text" placeholder="INTERVALO">
                     </div>
-                    <div>
-                        <!-- em breve adicionar um código de barras -->
-                        <!-- <input class="input-codebar" type="text" placeholder="codigo de barras"> -->
-                        <h2 class="info">
-                            Em caso de perca ou roubo procurar o departamento pessoal para emitir um novo crachá.
-                        </h2>
+                    <!-- Gerador do código de barras -->
+                    <div id="barcode-div">
+                       <svg id="code128"></svg>
                     </div>
                     <div>
-                        <input class="input-number" type="text" placeholder="NÚMERO DA MATRICULA">
+                        <input id="codebar-input-number" type="text" placeholder="NÚMERO DA MATRICULA" onkeyup="codeBarGen()">
                     </div>
             </section>
     </div>
-</body>
-<main>
-        <div id="buttons">
-            <input id="logoInput" type="file" onchange="logoFile()" hidden/><br />
-            
-            <input id="employeerInput" type="file" onchange="previewFile()" hidden /><br / >
-
-            <input id="PJInput" type="file" onchange="PJFile()" hidden/><br />
-
-            <input id="logopjInput" type="file" onchange="logoPJFile()" hidden/><br />
-
-            <button  onclick="printBtnActive()" id="print" class="custom-btn"><span class="iconprint"><ion-icon name="print"></ion-icon></span>IMPRIMIR</button>
-        </div>     
-</main>
     
+    <div id="buttons">
+        <input id="logoInput" type="file" onchange="logoFile()" hidden/><br />
+        
+        <input id="employeerInput" type="file" onchange="previewFile()" hidden /><br / >
 
+        <button  onclick="printBtnActive()" id="print" class="custom-btn"><span class="iconprint"><ion-icon name="print"></ion-icon></span>IMPRIMIR</button>
+    </div>     
+    
+</body>
 </html>
