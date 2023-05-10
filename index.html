@@ -7,83 +7,74 @@
     <title>Badgelab</title>
     <link rel="stylesheet" href="css.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-<script src="./script.js"></script>
-
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/jsbarcode/3.3.20/JsBarcode.all.min.js"></script>
+    <script src="./script.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <h2 class="conteiner_titulo"><b class="conteiner_titulo_negrito">Badge</b>lab</h2>
-    </header>
-        <div class="conteiner">
+    <main>
+        <header>
+            <h2 class="conteiner_titulo"><b class="conteiner_titulo_negrito">Badge</b>lab</h2>
+        </header>
+            <div class="conteiner">
 
-            <div id="frente-cracha">
-                <div class="info-front">
-                    <label  for="logoInput"><img id="logo" src=""  alt="logo da empresa" /></label>
-                    <input type="text" id="employee" placeholder="NOME E SOBRENOME">
-                
-                    <figure class="image-container">
-                        <label  for="employeerInput">  <img  id="employeeimage" src="./img projeto/idtemp.png"  alt="foto do colaborador" /></label>
-                    </figure>
-                
-                    <input type="text" id="ocupation" placeholder="FUNÇÃO">
+                <div id="frente-cracha">
+                    <div class="info-front">
+                        <label  for="logoInput"><img id="logo" src=""  alt="logo da empresa" /></label>
+                        <input type="text" id="employee" placeholder="NOME E SOBRENOME">
+                    
+                        <figure class="image-container">
+                            <label  for="employeerInput">  <img  id="employeeimage" src="./img projeto/idtemp.png"  alt="foto do colaborador" /></label>
+                        </figure>
+                    
+                        <input type="text" id="ocupation" placeholder="FUNÇÃO">
 
+                    </div>
+                    
                 </div>
-                
-            </div>
+            
+            
+            <section id="verso-cracha">
+                        <div>
+                            <h2 class="versotxt">Nome Completo</h2>
+                            <input class="inputverso" type="text" placeholder="NOME COMPLETO">
+                        </div>
+                        <div>
+                            <h2 class="versotxt">PIS</h2>
+                            <input class="inputverso" type="text" placeholder="NÚMERO DO PIS">
+                        </div>
+                        <div>
+                            <h2 class="versotxt">Horário Segunda à Quinta:</h2>
+                            <input class="inputverso" type="text" placeholder="HORÁRIO">
+                        </div>
+                        <div>
+                            <h2 class="versotxt">Horário Sexta:</h2>
+                            <input class="inputverso" type="text" placeholder="HORÁRIO">
+                        </div>
+                        <div>
+                            <h2 class="versotxt">intervalo:</h2>
+                            <input class="inputverso" type="text" placeholder="INTERVALO">
+                        </div>
+                        <!-- Gerador do código de barras -->
+                        <div id="barcode-div">
+                        <svg id="code128"></svg>
+                        </div>
+                        <div>
+                            <input id="codebar-input-number" type="text" placeholder="NÚMERO DA MATRICULA" onkeyup="codeBarGen()">
+                        </div>
+                </section>
+        </div>
         
-        
-        <section id="verso-cracha">
-                    <div>
-                        <h2 class="versotxt">Nome Completo</h2>
-                        <input class="inputverso" type="text" placeholder="NOME COMPLETO">
-                    </div>
-                    <div>
-                        <h2 class="versotxt">PIS</h2>
-                        <input class="inputverso" type="text" placeholder="NÚMERO DO PIS">
-                    </div>
-                    <div>
-                        <h2 class="versotxt">Horário Segunda à Quinta:</h2>
-                        <input class="inputverso" type="text" placeholder="HORÁRIO">
-                    </div>
-                    <div>
-                        <h2 class="versotxt">Horário Sexta:</h2>
-                        <input class="inputverso" type="text" placeholder="HORÁRIO">
-                    </div>
-                    <div>
-                        <h2 class="versotxt">intervalo:</h2>
-                        <input class="inputverso" type="text" placeholder="INTERVALO">
-                    </div>
-                    <div>
-                        <!-- em breve adicionar um código de barras -->
-                        <!-- <input class="input-codebar" type="text" placeholder="codigo de barras"> -->
-                        <h2 class="info">
-                            Em caso de perca ou roubo procurar o departamento pessoal para emitir um novo crachá.
-                        </h2>
-                    </div>
-                    <div>
-                        <input class="input-number" type="text" placeholder="NÚMERO DA MATRICULA">
-                    </div>
-            </section>
-    </div>
-</body>
-<main>
         <div id="buttons">
             <input id="logoInput" type="file" onchange="logoFile()" hidden/><br />
             
-            <input id="employeerInput" type="file" onchange="previewFile()" hidden /><br / >
-
-            <input id="PJInput" type="file" onchange="PJFile()" hidden/><br />
-
-            <input id="logopjInput" type="file" onchange="logoPJFile()" hidden/><br />
+            <input id="employeerInput" type="file" onchange="previewFile()" hidden/><br / >
 
             <button  onclick="printBtnActive()" id="print" class="custom-btn"><span class="iconprint"><ion-icon name="print"></ion-icon></span>IMPRIMIR</button>
-        </div>     
-</main>
-    
-
+        </div>  
+    </main>
+</body>
 </html>
