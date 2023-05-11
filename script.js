@@ -1,5 +1,5 @@
 
-// const printBtn = document.getElementById('print');
+// const printBtn = document.getElementById('print_btn');
 function printBtnActive(){
   logicTest = confirm("Você deseja imprimir seu trabalho?");
   if (logicTest == true){
@@ -17,8 +17,8 @@ window.addEventListener("scroll", function(){
 
 
 function previewFile() {
-  const preview = document.querySelector('#employeeimage');
-  const file = document.querySelector('#employeerInput').files[0];
+  const preview = document.querySelector('#employeer_photo');
+  const file = document.querySelector('#chose_photo').files[0];
   const reader = new FileReader();
 
   reader.addEventListener("load", () => {
@@ -32,8 +32,8 @@ function previewFile() {
 }
 // carregar o arquivo de imagem
 function logoFile() {
-  const preview = document.querySelector('#logo');
-  const file = document.querySelector('#logoInput').files[0];
+  const preview = document.querySelector('#brand_logo');
+  const file = document.querySelector('#chose_logo').files[0];
   const reader = new FileReader();
 
   reader.addEventListener("load", () => {
