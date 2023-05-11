@@ -143,7 +143,7 @@ body {
     border-radius: 5px;
     align-items: center;
     justify-content: center;
-    max-width: 150px;
+    max-width: 180px;
     height: 180px;
     background-size: 140px;
     cursor:pointer;
@@ -168,12 +168,12 @@ body {
     text-align: center;
     display: block;
     border: none;
-    font-size: absolute;
+    font-size: auto;
     font-weight: bold;
 }
 
 #ocupation {
-    font-size: absolute;
+    font-size: auto;
     font-weight: bold;
     align-items: center;
     justify-content: center;
