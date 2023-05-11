@@ -25,7 +25,78 @@ body {
 .container_title_bold {
     font-weight: 700;
 }
-   
+
+.menu_card_area {
+    height: 20px;
+    position: absolute;
+    width: 21%;
+    height: 490px;
+    transition: transform 0.5s ease-in-out; /* adicionando transição ao transform */
+    transform: translateY(-490px); /* adicionando transform inicial */
+
+}
+
+.menu_card_area:hover {
+    transform: translateY(0px); /* adicionando transform no hover */
+}
+
+.navegation_card_menu {
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 80px 0px 0px 45px;
+    width: 200px;
+    height: 350px;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+    position: absolute;
+}
+
+.hole_card {
+    background: #0a0a0a;
+    border-radius: 10px;
+    width: 65px;
+    height: 10px;
+    margin: 0px 69px;
+}
+
+.cord_card {
+    background: #f15006;
+    border-radius: 0px 0 5px 5px;
+    height: 180px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -160px;
+    left: 77px;
+}
+
+.card_list_itens {
+    border-bottom: #363636 1px solid;
+    width: 140px;
+    list-style: none;
+    margin: auto;
+    padding: 1em; 
+}
+
+.card_list_itens:last-child {
+    border-bottom: none;
+}
+
+.card_link {
+    color: #03000a;
+    text-decoration: none;
+    padding: 1em;
+}
+
+.card_link:hover {
+    color: #f15006;
+}
+
 .container_card {
     display: flex;
     flex-wrap: wrap;
