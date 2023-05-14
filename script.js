@@ -8,14 +8,10 @@ function printBtnActive(){
       alert('A, ok tudo bem, até mais!')
   }
 }
-
-
 window.addEventListener("scroll", function(){
   var header = document.querySelector("header");
   header.classList.toggle("sticky", window.scrollY >0)
 })
-
-
 function previewFile() {
   const preview = document.querySelector('#employeer_photo');
   const file = document.querySelector('#chose_photo').files[0];
@@ -45,10 +41,7 @@ function logoFile() {
     reader.readAsDataURL(file);
   }
 }
-
-
 // Barcode Generator
-
 function codeBarGen() {
 let codebar = document.querySelector("#codebar-input-number");
 codebar = codebar.value;
@@ -58,5 +51,4 @@ JsBarcode("#code128", codebar, {
   lineColor: "black",
 });
 }
-
 JsBarcode();

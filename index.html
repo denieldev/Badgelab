@@ -1,87 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Badgelab</title>
-    <link rel="stylesheet" href="css.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/jsbarcode/3.3.20/JsBarcode.all.min.js"></script>
-    <script src="./script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Badgelab</title>
+  <link rel="stylesheet" href="css.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/jsbarcode/3.3.20/JsBarcode.all.min.js"></script>
+  <script src="./script.js" defer></script>
 </head>
 
 <body>
-    <main>
-        <header>
-            <h2 class="container_title"><b class="container_title_bold">Badge</b>lab</h2>
-            <!-- Menu de navegação entre outros modelos de crachás -->
-            <div class="menu_card_area">
-                <nav class="navegation_card_menu">
-                    <div class="cord_card"></div>
-                    <div class="hole_card"></div>
-                    <div class="card_menu">
-                        <ul class="card_list">
-                            <li class="card_list_itens"><a href="#" class="card_link" alt="crachá CLT">CLT</a></li>
-                            <li class="card_list_itens"><a href="#" class="card_link" alt="crachá PJ">PJ</a></li>
-                            <li class="card_list_itens"><a href="#" class="card_link" alt="crachá aprendiz">Aprendiz</a></li>
-                            <li class="card_list_itens"><a href="#" class="card_link" alt="crachá vígia">Vígia</a></li>
-                            <li class="card_list_itens"><a href="#" class="card_link" alt="crachá estagiário">Estagiário</a></li>
-                            <li class="card_list_itens"><a href="#" class="card_link" alt="crachá visitante">Visitante</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
+	<main>
+		<header>
+			<h2 class="container_title"><b class="container_title_bold">Badge</b>lab</h2>
+			<!-- Menu de navegação entre outros modelos de crachás -->
+			<div class="menu_card_area">
+					<nav class="navegation_card_menu">
+							<div class="cord_card"></div>
+							<div class="hole_card"></div>
+							<div class="card_menu">
+									<ul class="card_list">
+											<li class="card_list_itens"><a href="#" class="card_link" alt="crachá CLT">CLT</a></li>
+											<li class="card_list_itens"><a href="#" class="card_link" alt="crachá PJ">PJ</a></li>
+											<li class="card_list_itens"><a href="#" class="card_link" alt="crachá aprendiz">Aprendiz</a></li>
+											<li class="card_list_itens"><a href="#" class="card_link" alt="crachá vígia">Vígia</a></li>
+											<li class="card_list_itens"><a href="#" class="card_link" alt="crachá estagiário">Estagiário</a></li>
+											<li class="card_list_itens"><a href="#" class="card_link" alt="crachá visitante">Visitante</a></li>
+									</ul>
+							</div>
+					</nav>
+			</div>
 
-        </header>
-            <div class="container_card">
-                <section id="card_layout">
-                    <div class="front_informations">
-                        <label  for="chose_logo"><img id="brand_logo" src="/img projeto/modelo logo@3x.png"  alt="logo da empresa" /></label>
-                        <input type="text" id="employeer" placeholder="NOME E SOBRENOME">
-                        <figure class="img_card">
-                            <label  for="chose_photo">  <img  id="employeer_photo" src="./img projeto/idtemp.png"  alt="foto do colaborador" /></label>
-                        </figure>
-                        <input type="text" id="ocupation" placeholder="FUNÇÃO">
-                    </div>
-                </section>
-                <section id="card_layout">
-                            <div>
-                                <h2 class="back_informations">Nome Completo</h2>
-                                <input class="back_input_card" type="text" placeholder="NOME COMPLETO">
-                            </div>
-                            <div>
-                                <h2 class="back_informations">PIS</h2>
-                                <input class="back_input_card" type="text" placeholder="NÚMERO DO PIS">
-                            </div>
-                            <div>
-                                <h2 class="back_informations">Horário Segunda à Quinta:</h2>
-                                <input class="back_input_card" type="text" placeholder="HORÁRIO">
-                            </div>
-                            <div>
-                                <h2 class="back_informations">Horário Sexta:</h2>
-                                <input class="back_input_card" type="text" placeholder="HORÁRIO">
-                            </div>
-                            <div>
-                                <h2 class="back_informations">intervalo:</h2>
-                                <input class="back_input_card" type="text" placeholder="INTERVALO">
-                            </div>
-                            <!-- Gerador do código de barras -->
-                            <div id="barcode-div">
-                            <svg id="code128"></svg>
-                            </div>
-                            <div>
-                                <input id="codebar-input-number" type="text" placeholder="NÚMERO DA MATRICULA" onkeyup="codeBarGen()">
-                            </div>
-                    </section>
-        <div id="function_btns">
-            <input id="chose_logo" type="file" onchange="logoFile()" hidden/><br />
-            <input id="chose_photo" type="file" onchange="previewFile()" hidden/><br/>
-            <button  onclick="printBtnActive()" id="print_btn" class="custom_print_btn"><span class="print_icon_img"><ion-icon name="print"></ion-icon></span>IMPRIMIR</button>
-        </div>  
-    </main>
+		</header>
+			<div class="container_card">
+					<section id="card_layout">
+							<div class="front_informations">
+									<label  for="chose_logo"><img id="brand_logo" src="/img projeto/modelo logo@3x.png"  alt="logo da empresa" /></label>
+									<input type="text" id="employeer" placeholder="NOME E SOBRENOME">
+									<figure class="img_card">
+											<label  for="chose_photo">  <img  id="employeer_photo" src="./img projeto/idtemp.png"  alt="foto do colaborador" /></label>
+									</figure>
+									<input type="text" id="ocupation" placeholder="FUNÇÃO">
+							</div>
+					</section>
+					<section id="card_layout">
+						<div>
+								<h2 class="back_informations">Nome Completo</h2>
+								<input class="back_input_card" type="text" placeholder="NOME COMPLETO">
+						</div>
+						<div>
+								<h2 class="back_informations">PIS</h2>
+								<input class="back_input_card" type="text" placeholder="NÚMERO DO PIS">
+						</div>
+						<div>
+								<h2 class="back_informations">Horário Segunda à Quinta:</h2>
+								<input class="back_input_card" type="text" placeholder="HORÁRIO">
+						</div>
+						<div>
+								<h2 class="back_informations">Horário Sexta:</h2>
+								<input class="back_input_card" type="text" placeholder="HORÁRIO">
+						</div>
+						<div>
+								<h2 class="back_informations">intervalo:</h2>
+								<input class="back_input_card" type="text" placeholder="INTERVALO">
+						</div>
+						<!-- Gerador do código de barras -->
+						<div id="barcode-div">
+						<svg id="code128"></svg>
+						</div>
+						<div>
+								<input id="codebar-input-number" type="text" placeholder="NÚMERO DA MATRICULA" onkeyup="codeBarGen()">
+						</div>
+					</section>
+		<div id="function_btns">
+				<input id="chose_logo" type="file" onchange="logoFile()" hidden/><br />
+				<input id="chose_photo" type="file" onchange="previewFile()" hidden/><br/>
+				<button onclick="printBtnActive()" id="print_btn" class="custom_print_btn"><img src="" alt="imprimir" class="print_icon_img"></button>
+		</div>  
+	</main>
 </body>
 </html>
