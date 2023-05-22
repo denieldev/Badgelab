@@ -18,27 +18,10 @@
 	<main>
 		<header>
 			<h2 class="container_title"><b class="container_title_bold">Badge</b>lab</h2>
-			<!-- Menu de navegação entre outros modelos de crachás -->
-			<div class="menu_card_area">
-					<nav class="navegation_card_menu">
-							<div class="cord_card"></div>
-							<div class="hole_card"></div>
-							<div class="card_menu">
-									<ul class="card_list">
-											<li class="card_list_itens"><a href="#" class="card_link" alt="crachá CLT">CLT</a></li>
-											<li class="card_list_itens"><a href="#" class="card_link" alt="crachá PJ">PJ</a></li>
-											<li class="card_list_itens"><a href="#" class="card_link" alt="crachá aprendiz">Aprendiz</a></li>
-											<li class="card_list_itens"><a href="#" class="card_link" alt="crachá vígia">Vígia</a></li>
-											<li class="card_list_itens"><a href="#" class="card_link" alt="crachá estagiário">Estagiário</a></li>
-											<li class="card_list_itens"><a href="#" class="card_link" alt="crachá visitante">Visitante</a></li>
-									</ul>
-							</div>
-					</nav>
-			</div>
 
 		</header>
-			<div class="container_card">
-					<section id="card_layout">
+			<div class="container_card" class="scene scene--card" >
+					<section id="card_layout" class="card__face card__face--front">
 							<div class="front_informations">
 									<label  for="chose_logo"><img id="brand_logo" src="/img projeto/modelo logo@3x.png"  alt="logo da empresa" /></label>
 									<input type="text" id="employeer" placeholder="NOME E SOBRENOME">
@@ -48,7 +31,7 @@
 									<input type="text" id="ocupation" placeholder="FUNÇÃO">
 							</div>
 					</section>
-					<section id="card_layout">
+					<section id="card_layout" class="card__face card__face--back">
 						<div>
 								<h2 class="back_informations">Nome Completo</h2>
 								<input class="back_input_card" type="text" placeholder="NOME COMPLETO">
@@ -77,11 +60,55 @@
 								<input id="codebar-input-number" type="text" placeholder="NÚMERO DA MATRICULA" onkeyup="codeBarGen()">
 						</div>
 					</section>
+			</div>
 		<div id="function_btns">
 				<input id="chose_logo" type="file" onchange="logoFile()" hidden/><br />
 				<input id="chose_photo" type="file" onchange="previewFile()" hidden/><br/>
-				<button onclick="printBtnActive()" id="print_btn" class="custom_print_btn"><img src="" alt="imprimir" class="print_icon_img"></button>
-		</div>  
+		</div>
+		<div class="menu_right_side">
+			<div onclick="Menu_side()" class="menu_btn"><img src="./img projeto/seta.svg" alt="abrir menu" class="see_menu"></div>
+			<nav class="menu_side_options">
+				<ul>
+					<li><img onclick="printBtnActive()" id="print_btn" src="./img projeto/print.svg" alt="QR code" class="icons_style"></li>
+					<li><a target="_blank" href="https://www.remove.bg/pt-br/upload"><img src="./img projeto/removebg.svg" alt="removebg site" class="icons_style"></a></li>
+					<li><a target="_blank" href="https://www.qr-code-generator.com/"><img src="./img projeto/qrcode.svg" alt="" class="icons_style"></a></li>
+					<li><img onclick="Mudarestado()" src="./img projeto/help.svg" alt="ajuda" class="icons_style" ></li>
+				</ul>
+			</nav>
+		</div>
+		<section class="help_me">
+			<div class="head_help_card">
+				<img src="./img projeto/help.svg" alt="">
+				<h2>Precisa de Ajuda?</h2>
+			</div>
+				<h2 class="title_help">Como utilizar o Badgelab?</h2>
+				<p class="subtitile_help">
+					1. Acesse o site do Badgelab.<br>
+					2. Clique no botão "Começar agora" para iniciar a criação do crachá.<br>
+					3. Escolha um modelo de layout de crachá pronto ou comece do zero.<br>
+					4. Preencha as informações solicitadas nos campos, como nome, foto, função e logo.<br>
+					5. Se desejar, utilize a ferramenta de remoção de fundo para deixar a sua foto com fundo transparente.<br>
+					6. Utilize a ferramenta de geração de QR Code para criar um código QR personalizado para o crachá.<br>
+					7. Escolha um fundo para o crachá ou utilize um fundo sólido.<br>
+					8. Visualize o crachá e faça ajustes se necessário.<br>
+					9. Quando estiver satisfeito com o resultado, clique em "Baixar" para baixar o crachá em formato PNG ou PDF.
+				</p>
+		</section>	
 	</main>
+	<footer>
+		<h2>Badgelab - 2023</h2>
+		<div class="social_links">
+			<ul class="social_tag">
+				<img src="./img projeto/linkedin.svg" alt="linkedin" class="social_btns">
+				<li><a target="_blank" href="https://www.linkedin.com/in/victor-daniel-martins-feitosa-8244461b9/">Daniel<br>Martins</a></li>
+				<li><a target="_blank" href="https://www.linkedin.com/in/weverson-meneses-97172612a/">Weverson<br>Meneses</a></li>
+			</ul>
+			<ul class="social_tag">
+				<img src="./img projeto/github.svg" alt="" class="social_btns">
+				<li><a target="_blank" href="https://github.com/dmtnz">dmntz</a></li>
+				<li><a href="https://github.com/weversonmp" target="_blank" rel="noopener noreferrer">weversonmp</a></li>
+			</ul>
+		</div>
+	</footer>
 </body>
 </html>
