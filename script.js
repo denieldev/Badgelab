@@ -53,7 +53,7 @@ JsBarcode("#code128", codebar, {
 JsBarcode();
 
 // card flip
-var cards = document.querySelector('.card'); // Pegar todas ocorrências
+var cards = document.querySelectorAll('.card'); // Pegar todas ocorrências
 cards.forEach((card) => { // Iterar sobre elas adicionando o listener
   card.addEventListener( 'click', function() {
     card.classList.toggle('is-flipped');
@@ -77,3 +77,10 @@ function Menu_side() {
       document.querySelector('.menu_side_options').style.right = '0';
 }
 
+function Flip() {
+  var flip = document.querySelector('.card__face--front, .card__face--front').style.visibility;
+  if(flip == "visible")
+      document.querySelector('.card__face--front, .card__face--front').style.visibility = 'hidden';
+  else
+      document.querySelector('.card__face--front, .card__face--front').style.visibility = 'visible';
+}
