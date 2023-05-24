@@ -40,6 +40,22 @@ function logoFile() {
     reader.readAsDataURL(file);
   }
 }
+
+function bgFile() {
+  const preview = document.querySelector('#background_photo');
+  const file = document.querySelector('#chose_bg').files[0];
+  const reader = new FileReader();
+
+  reader.addEventListener("load", () => {
+    // convert image file to base64 string
+    preview.src = reader.result;
+  }, false);
+
+  if (file) {
+    reader.readAsDataURL(file);
+  }
+}
+
 // Barcode Generator
 function codeBarGen() {
 let codebar = document.querySelector("#codebar-input-number");

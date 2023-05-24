@@ -9,7 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/jsbarcode/3.3.20/JsBarcode.all.min.js"></script>
   <script src="./script.js" defer></script>
 </head>
@@ -17,11 +19,19 @@
 <body>
 	<main>
 		<header>
-			<h2 class="container_title"><b class="container_title_bold">Badge</b>lab</h2>
-
+			<div class="header">
+				<h2 class="container_title">Badgelab</h2>
+				<p class="container_subtitle">O Badgelab é um site que permite a criação e 
+					impressão de crachás personalizados. Com ele, você pode facilmente criar
+					 o seu próprio design exclusivo com a sua logo, fundo e foto.</p>
+					<button class="make_a_card">criar agora</button>
+			</div>
+			<div class="card_area">
+				<img src="./img projeto/card.svg" alt="crachá modelo" class="card_floating">
+			</div>
 		</header>
 		<div class="flip_card">
-			<img onclick="Flip()" src="./img projeto/reload.svg" alt="flip card" class="icons_style">
+			<!-- <img onclick="Flip()" src="./img projeto/reload.svg" alt="flip card" class="icons_style"> -->
 		</div>
 			<div class="container_card" class="scene scene--card" >
 					<section  id="card_layout" class="card__face card__face--front">
@@ -31,6 +41,9 @@
 									<figure class="img_card">
 											<label  for="chose_photo">  <img  id="employeer_photo" src="./img projeto/idtemp.png"  alt="foto do colaborador" /></label>
 									</figure>
+									<!-- <figure class="img_bg_card">
+										<label  for="chose_bg">  <img  id="background_photo" src="./img projeto/background.png"  alt="seu fundo de crachá" /></label>
+								</figure> -->
 									<input type="text" id="ocupation" placeholder="FUNÇÃO">
 							</div>
 					</section>
@@ -67,6 +80,7 @@
 		<div id="function_btns">
 				<input id="chose_logo" type="file" onchange="logoFile()" hidden/><br />
 				<input id="chose_photo" type="file" onchange="previewFile()" hidden/><br/>
+				<input id="chose_bg" type="file" onchange="bgFile()" hidden/><br/>
 		</div>
 		<div class="menu_right_side">
 			<div onclick="Menu_side()" class="menu_btn"><img src="./img projeto/seta.svg" alt="abrir menu" class="see_menu"></div>
@@ -99,7 +113,7 @@
 		</section>	
 	</main>
 	<footer>
-		<h2>Badgelab - 2023</h2>
+		<h2><b class="container_title_bold">Badge</b>lab</h2>
 		<div class="social_links">
 			<ul class="social_tag">
 				<img src="./img projeto/linkedin.svg" alt="linkedin" class="social_btns">
@@ -113,5 +127,17 @@
 			</ul>
 		</div>
 	</footer>
+
+	<script type="text/javascript" src="vanilla-tilt.js"></script>
+	<script type="text/javascript">
+		VanillaTilt.init(document.querySelector(".card_floating"), {
+			max: 25,
+			speed: 400
+		});
+		
+		//It also supports NodeList
+		VanillaTilt.init(document.querySelectorAll(".card_floating"));
+	</script>
+
 </body>
 </html>
