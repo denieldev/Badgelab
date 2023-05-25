@@ -68,35 +68,3 @@ JsBarcode("#code128", codebar, {
 }
 JsBarcode();
 
-// card flip
-var cards = document.querySelectorAll('.card'); // Pegar todas ocorrências
-cards.forEach((card) => { // Iterar sobre elas adicionando o listener
-  card.addEventListener( 'click', function() {
-    card.classList.toggle('is-flipped');
-  });
-})
-
-// caixa de ajuda
-function Mudarestado(help_me) {
-  var visibility = document.querySelector('.help_me').style.visibility;
-  if(visibility == "visible")
-      document.querySelector('.help_me').style.visibility = 'hidden';
-  else
-      document.querySelector('.help_me').style.visibility = 'visible';
-}
-
-function Menu_side() {
-  var right = document.querySelector('.menu_side_options').style.right;
-  if(right == "0px")
-      document.querySelector('.menu_side_options').style.right = '-80px';
-  else
-      document.querySelector('.menu_side_options').style.right = '0';
-}
-
-function Flip() {
-  var flip = document.querySelector('.card__face--front, .card__face--front').style.visibility;
-  if(flip == "visible")
-      document.querySelector('.card__face--front, .card__face--front').style.visibility = 'hidden';
-  else
-      document.querySelector('.card__face--front, .card__face--front').style.visibility = 'visible';
-}
