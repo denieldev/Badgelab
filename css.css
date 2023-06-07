@@ -12,6 +12,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	background-repeat: no-repeat;
+	min-width: 700px;
 }
 header {
 	display: flex;
@@ -27,7 +28,7 @@ header {
 	font-weight: 400;
 	color: #ffffff;
 	padding: 1em;
-	width: 50vw;
+	/* width: 50vw; */
 	height: 100vh;
 	font-family: 'Unbounded', cursive;
 }
@@ -56,19 +57,27 @@ header {
 	border: none;
 	font-family: 'Unbounded', cursive;
 	font-weight: 700;
-	background: #FA9664;
+	background: #94f876;
 	padding: 1em;
 	border-radius: 50px;
 }
 
+.make_a_card a {
+	text-decoration: none;
+	color: #103a30;
+}
+
 .card_area {
-	background: linear-gradient(#103a30, #99f2c8, #94f876cc);
+	background: linear-gradient(#103a3000, #99f2c833, #94f876);
 	display: flex;
+	width: 600px;
+	height: 600px;
+	margin-bottom: 150px;
 	justify-content: center;
 	align-items: center;
 	position: relative;
 	right: 0;
-	width: 50vw;
+	border-radius: 0% 0% 300px 300px;
 }
 
 .card_floating {
@@ -81,7 +90,7 @@ header {
 .container_card {
 	display: flex;
 	gap: 100px;
-	width:100vw;
+	/* width:100vw; */
 	height: 80vh;
 	justify-content: center;
 	align-items: center;
@@ -234,13 +243,10 @@ header {
 }
 
 .menu {
-	position: relative;
 	width: 200px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	right: -200px;
-	top: -50px;
 
 }
 
@@ -298,13 +304,12 @@ header {
 
 footer {
 	display: flex;
+	width: 1080px;
 	background: #c7c7c7;
 	color: #ffffff;
 	height: 85px;
-	width: 100vw;
 	bottom: 0;
 	padding: 20px 0;
-	/* position: fixed; */
 	font-family: 'Unbounded', cursive;
 	font-size: 12px;
 }
@@ -321,7 +326,7 @@ footer h2 {
 	font-weight: bold;
 	justify-content: center;
 	text-align: left;
-	gap: 200px;
+	gap: 20px;
 }
 .social_links ul{
 	display: flex;
@@ -364,4 +369,59 @@ footer h2 {
 html {
 	scroll-behavior: smooth;
 	transition: ease-in-out 1000s;
+}
+
+@media screen and (min-width:700px) {
+	header {
+		display: flex;
+		flex-wrap:wrap ;
+		justify-content: center;
+	}
+	
+	.card_area {
+		display: none;
+	}
+
+	.container_card {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		height: 1000px;
+	}
+	#card_layout{
+		margin: 40px;
+	}
+	footer {
+		height: 200px;
+		box-sizing: border-box;
+		width: auto;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		text-align: center;
+	}
+
+	.social_links {
+
+	}
+
+	.menu{
+		display: none;
+	}
+
+}
+
+@media screen and (min-width:1024px){
+	.card_area {
+		display: flex;
+	}
+
+	.menu {
+		display: flex;
+		position: relative;
+		right: 250px;
+	}
+
+	
+
 }
