@@ -371,7 +371,7 @@ html {
 	transition: ease-in-out 1000s;
 }
 
-@media screen and (min-width:700px) {
+@media screen and (min-width:600px) {
 	header {
 		display: flex;
 		flex-wrap:wrap ;
